@@ -1,5 +1,5 @@
 class Person
-  def initialize(age, name = 'Unknown', parent_permission = true)
+  def initialize(age, name = 'Unknown', _parent_permission = true)
     @id = Random.rand(1..100)
     @name = name
     @age = age
@@ -7,20 +7,17 @@ class Person
 
   attr_reader :id, :name, :age
 
-  def set_name(name)
+  def _name(name)
     @name = name
   end
 
-  def set_age(age)
+  def _age(age)
     @age = age
   end
 
-  def is_of_age?
-    if @age >= 18
-      true
-    else
-      false
-    end
+#   Linter error asked to rename from is_of_age? to of_age?
+  def of_age?
+    @age >= 18 ? true : false
   end
 
   def can_use_services?
