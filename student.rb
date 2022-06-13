@@ -1,4 +1,4 @@
-require_relative "./person.rb"
+require_relative 'person'
 class Student < Person
     def initialize(classroom)
         super()
@@ -6,6 +6,6 @@ class Student < Person
     end
 
     def play_hooky
-        "¯\(ツ)/¯"
+        '¯\(ツ)/¯'
     end
 end
