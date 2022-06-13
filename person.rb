@@ -5,23 +5,13 @@ class Person
     @age = age
   end
 
-  def id
-    @id
-  end
+  attr_reader :id, :name, :age
 
-  def name
-    @name
-  end
-
-  def age
-    @age
-  end
-
-  def setName(name)
+  def set_name(name)
     @name = name
   end
 
-  def setAge(age)
+  def set_age(age)
     @age = age
   end
 
