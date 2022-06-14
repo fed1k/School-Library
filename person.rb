@@ -3,9 +3,11 @@ class Person
     @id = Random.rand(1..100)
     @name = name
     @age = age
+    @parent_permission = _parent_permission
   end
 
-  attr_reader :id, :name, :age
+  attr_reader :id
+  attr_accessor :name, :age
 
   def _name(name)
     @name = name
@@ -20,8 +22,8 @@ class Person
   end
 
   def can_use_services?
-    true if is_of_age? || parent_permission
+    true if of_age? || @parent_permission
   end
 
-  private :is_of_age?
+  private :of_age?
 end
