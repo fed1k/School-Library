@@ -1,5 +1,5 @@
 class Person
-  def initialize(age, name = 'Unknown', _parent_permission = true)
+  def initialize(age, name = 'Unknown', _parent_permission: true)
     @id = Random.rand(1..100)
     @name = name
     @age = age
@@ -15,9 +15,8 @@ class Person
     @age = age
   end
 
-#   Linter error asked to rename from is_of_age? to of_age?
   def of_age?
-    @age >= 18 ? true : false
+    @age >= 18
   end
 
   def can_use_services?
