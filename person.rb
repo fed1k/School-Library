@@ -1,6 +1,7 @@
 require_relative 'nameable'
 class Person < Nameable
   def initialize(age, name = 'Unknown', parent_permission: true)
+    super()
     @id = Random.rand(1..100)
     @name = name
     @age = age
@@ -8,7 +9,7 @@ class Person < Nameable
   end
 
   def correct_name
-    return @name
+    @name
   end
 
   attr_reader :id
