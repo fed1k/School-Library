@@ -8,4 +8,12 @@ class Rental
     @book = book
     @person = person
   end
+
+  def add_rental
+    book.rentals << self
+  end
+
+  def add_to_person
+    person.rentals << self
+  end
 end
